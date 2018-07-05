@@ -86,11 +86,13 @@ class crawler {
     const data = dbResult.data
 
     let result = []
-    for (let i = START; i < data.length && result.length <= LIMIT; i++) {
+    for (let i = 0, skipped = 0; i < data.length && result.length <= LIMIT; i++) {
       let item = data[i]
-      const allPassed = utils.filterKeyword(item.title, FILTER)
-      if (allPassed) {
-        result.push({title: item.title, href: item.alt, id: item.id})
+      const allPassed = utils.filterKeyword(item, FILTER)
+      if (allPassed && skipped >= START) {
+        result.push(item)
+      } else if (allPassed) {
+        skipped ++
       }
     }
 
