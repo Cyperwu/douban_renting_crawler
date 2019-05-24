@@ -19,4 +19,6 @@ node mongoDB
 
 `n` 下一页
 
+`b` 上一页
+
 `bl <num>` 或者 `blacklist <num>` 把列出来的某一条加入黑名单

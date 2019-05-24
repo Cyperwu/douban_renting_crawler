@@ -92,8 +92,10 @@ class Interface {
 
     vorpal
       .command('blackList [index]', '黑名单')
+      .option('-s, --string', '内容中的关键词')
       .alias('bl')
       .action(async function(args) {
+        console.log('args: ', args)
         const index = args.index
         if (!self.currentResult[index]) {
           console.log(self.currentResult);
