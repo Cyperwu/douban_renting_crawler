@@ -6,7 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "crawler": "^1.1.4",
-    "got": "^8.3.1",
+    "got": "^11.8.5",
     "mongoose": "^5.1.5",
     "mongoose-findorcreate": "^3.0.0",
     "vorpal": "^1.12.0"
